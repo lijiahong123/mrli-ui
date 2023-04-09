@@ -51,6 +51,7 @@ button {
     background: transparent;
 
     &.l-button {
+        user-select: none;
         border: 1px solid transparent;
         display: inline-block;
         line-height: 1;
