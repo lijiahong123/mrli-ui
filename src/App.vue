@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <l-button @click="click">默认按钮</l-button>
-    <l-button type="default">default按钮</l-button>
-    <l-button type="success">success按钮</l-button>
-    <l-button type="waring">waring按钮</l-button>
-    <l-button type="danger">danger按钮</l-button>
-    <l-button type="info">info按钮</l-button>
+    <l-button disabled @click="click">默认按钮</l-button>
+    <l-button  size="medium" type="default">default按钮</l-button>
+    <l-button disabled size="small" type="success">success按钮</l-button>
+    <l-button disabled size="mini" type="waring">waring按钮</l-button>
+    <l-button disabled type="danger">danger按钮</l-button>
+    <l-button disabled type="info">info按钮</l-button>
+    <l-button disabled type="text">info按钮</l-button>
   </div>
 </template>
 

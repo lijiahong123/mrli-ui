@@ -13,22 +13,36 @@ export default {
         type: {
             type: String,
             default: 'default'
+        },
+        size: {
+            type: String,
+            default: ''
+        },
+        disabled: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
         getButtonClass() {
-            return ['l-button', `l-button--${this.type}`]
+            return [
+                'l-button',
+                `l-button--${this.type}`,
+                this.size ? `l-button--${this.size}` : null,
+                this.disabled ? 'l-button__disabled' : null
+            ]
         }
     },
     methods: {
         clickBntton($event) {
+            if (this.disabled) return
             this.$emit('click', $event)
         }
     }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "../../access/base.scss";
 
 button {
@@ -60,6 +74,22 @@ button {
         &:active {
             opacity: 1;
         }
+
+        &.l-button__disabled {
+            cursor: no-drop;
+            opacity: .5;
+
+            &:hover,
+            &:focus {
+                opacity: .5;
+            }
+
+            &:active {
+                opacity: .5;
+            }
+        }
+
+        // type
 
         &.l-button--default {
             border-color: $--base-border-color;
@@ -96,5 +126,25 @@ button {
             background: $--info-bgc;
             color: $--white-color;
         }
+
+        &.l-button--text {
+            background: none;
+            color: $--primary-bgc;
+            padding: 0;
+        }
+
+        // size
+        &.l-button--medium {
+            padding: 10px 20px;
+        }
+
+        &.l-button--small {
+            padding: 9px 15px;
+        }
+
+        &.l-button--mini {
+            padding: 7px 15px;
+        }
     }
-}</style>
+}
+</style>
