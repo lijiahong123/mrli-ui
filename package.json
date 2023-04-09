@@ -1,6 +1,6 @@
 {
   "name": "@mrli-utils/ui",
-  "version": "0.0.1",
+  "version": "0.1.0-0",
   "private": false,
   "main": "dist/lib/mrli-ui.umd.js",
   "module": "dist/lib/mrli-ui.common.js",
