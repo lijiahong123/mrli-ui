@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <l-button disabled @click="click">默认按钮</l-button>
+    <l-button  @click="click">默认按钮</l-button>
     <l-button  size="medium" type="default">default按钮</l-button>
     <l-button disabled size="small" type="success">success按钮</l-button>
     <l-button disabled size="mini" type="waring">waring按钮</l-button>

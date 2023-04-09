@@ -2,11 +2,14 @@
   "name": "@mrli-utils/ui",
   "version": "0.0.1",
   "private": false,
-  "main":"dist/lib/index.js.umd.js",
-  "module": "dist/lib/index.js.common.js",
+  "main": "dist/lib/mrli-ui.umd.js",
+  "module": "dist/lib/mrli-ui.common.js",
+  "files": [
+    "dist/lib/**"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name lib/index.js",
+    "build": "vue-cli-service build --target lib --name lib/mrli-ui package/index.js",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
@@ -16,6 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.21.3",
+    "@mrli-utils/ui": "^0.0.1",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-unit-jest": "~5.0.0",

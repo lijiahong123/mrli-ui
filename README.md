@@ -15,17 +15,18 @@ $ npm install @mrli-utils/ui -S
 main.js
 
 ```js
-import Vue from "vue";
-import App from "./App.vue";
-import MrliUI  from  from '@mrli-utils/ui';
+import Vue from "vue"
+import App from "./App.vue"
+import MrliUI from "@mrli-utils/ui"
+import "@mrli-utils/ui/dist/lib/mrli-ui.css"
 
-Vue.use(MrliUI )
+Vue.use(MrliUI)
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+    render: h => h(App),
+}).$mount("#app")
 ```
 
 ## 方式二：按需引入
@@ -33,21 +34,21 @@ new Vue({
 main.js
 
 ```js
-import Vue from "vue";
-import App from "./App.vue";
-import {Lbutton}  from  from '@mrli-utils/ui';
+import Vue from "vue"
+import App from "./App.vue"
+import { LButton } from "@mrli-utils/ui"
+import "@mrli-utils/ui/dist/lib/mrli-ui.css"
 
 Vue.use(Lbutton)
 
-Vue.config.productionTip = false;
+Vue.config.productionTip = false
 
 new Vue({
-  render: (h) => h(App),
-}).$mount("#app");
+    render: h => h(App),
+}).$mount("#app")
 ```
 
 ## 页面内使用
-
 
 ```html
 <template>
