@@ -1,28 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <l-button @click="click">默认按钮</l-button>
+    <l-button type="default">default按钮</l-button>
+    <l-button type="success">success按钮</l-button>
+    <l-button type="waring">waring按钮</l-button>
+    <l-button type="danger">danger按钮</l-button>
+    <l-button type="info">info按钮</l-button>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
-  components: {
-    HelloWorld,
-  },
+  methods:{
+    click(e) {
+      console.log("点击",e);
+    }
+  }
 };
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  .l-button+.l-button {
+    margin-left: 5px;
+  }
 }
 </style>
