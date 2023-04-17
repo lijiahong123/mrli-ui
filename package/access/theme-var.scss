@@ -1,7 +1,9 @@
+$--theme-color: #1677ff;
+
 // background-color
 $--default-bgc:#fff;
 $--success-bgc: #3db103;
-$--primary-bgc: #1677ff;
+$--primary-bgc: $--theme-color;
 $--danger-bgc: #ff4d4f;
 $--waring-bgc:#e90;
 $--info-bgc: #909399;
